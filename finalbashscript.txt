@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Define an array of different colors for numbers
+colors=(31 32 33 34 35 36 "38;5;208" "38;5;250")
+#Creating a for loop that runs 50 times, from i=1 to i=50
+#Bash and Zsh will expand this into a list because of the brace expansion {1..50}
+for i in {1..50}; do
+  #will pick a color from the array created earlier using modulo math to cycle through them
+  #The ${#colors[@]} gets the number of elements in the array, which is 8 elements
+  ##The % modulo operator ensures colors repeat from the beginning after the last one
+  color=${colors[$((i % ${#colors[@]}))]}
+
+  #This will print the numbers in different colors
+  ## The \e sections adds bold and the \e[0m resets all formatting so the next
+  ## line is default
+  echo -e "\e[1;${color}m$i\e[0m"
+done
+exit 0
