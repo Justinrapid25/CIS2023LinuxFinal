@@ -15,4 +15,5 @@ for i in {1..50}; do
   ## line is default
   echo -e "\e[1;${color}m$i\e[0m"
 done
+#End script gracefully
 exit 0
