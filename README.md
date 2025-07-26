@@ -61,7 +61,7 @@ exit 0
 
 **Step 13**: Permissions were changed using `chmod u+x finalbashscript.sh` in order to execute it. Additionally, confirmed these permissions took effect running `ls -la`.
 
-**Step 14**: The script was executed in the current directory it was in using `./finalbashscript.sh`, and it worked!
+**Step 14**: The script was executed `./finalbashscript.sh` and it worked as intended.
 
 **Step 15**: Changed the *finalbashscript.sh* to a *.txt* file by running `mv finalbashscript.sh finalbashscript.txt`
 
