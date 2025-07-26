@@ -1,24 +1,23 @@
 # CIS2023LinuxFinal
 ### These are the steps I took to create, maintain, and upload files into Github using git on my Linux VM.
 
-**Step 1**: Confirmed git was installed on my system by running `git --version`
+**Step 1**: Confirmed git was installed on the system `git --version`
 
-**Step 2**: Opened cherrytree in the background running the command `cherrytree &` to help keep track of my steps and take notes that will eventually be added into the README.md file.
+**Step 2**: Opened cherrytree in the background `cherrytree &` to help keep track of steps and take notes that will eventually be added into the README.md file.
 
 **Step 3**: Next, made an account on github making sure to adhere to the instructions.
 
-**Step 4**: After making an account, it was time to work on configuring git before making a repo. Configured git to include name and email by running these commands `git config --global user.nam "NAME"` and `git config --global user.email "EMAIL"`.
+**Step 4**: After account creation, the git was configured in the terminal to include a name and an email `git config --global user.nam "NAME"` and `git config --global user.email "EMAIL"`.
 
-**Step 5**: Confirmed configuration changes were made executing the command `cat ~/.gitconfig` which displayed the name and email provided in **Step 4**.
+**Step 5**: Confirmed configuration changes were made `cat ~/.gitconfig` which displayed the name and email provided in **Step 4**.
 
 **Step 6**: Ran `ssh-keygen -o` to generate ssh keys so the VM can communicate with Github securely. 
 
-**Step 7**: Once the keys were created the `cat /directory/directory/directory/id_rsa.pub` command was executed to confirm its creation. 
+**Step 7**: Once the keys were created, the `cat /directory/directory/directory/id_rsa.pub` command was executed to confirm its creation. 
 
-**Step 8**: Then the public key was copied from the terminal into the github account under settings -> SSH and GPG Keys -> New SSH key
+**Step 8**: The public key was copied from the terminal into the github account under settings -> SSH and GPG Keys -> New SSH key
 
-**Step 9**: At this point it was time to create a repo in github to add the bash script. Clicked the plus sign located to the right of the chatbot icon and to the left of the your issues button.
-Once clicked, there is an option to select new repo. A public repo was selected during the initial setup and readme was unchecked because it was going to be added manually.
+**Step 9**: At this point it was time to create a repo in github to add the bash script. A public repo was selected during the initial setup and readme was unchecked because it was going to be added manually.
 
 **Step 10**: Following the initial setup, Github provided line by line commands to run in order to get your repo up and running. <br>
             <br>
@@ -31,7 +30,7 @@ Once clicked, there is an option to select new repo. A public repo was selected 
             - `git remote add origin ...` <br>
             - `git push -u origin main` <br>
 <br>
-**Step 11**: After `git push -u origin main` was ran, checked github to confirm that the repository was up with the README.md file.
+**Step 11**: Checked github to confirm that the repository was up and contained the README.md file.
 
 **Step 12**: Subsequently, it was time to work on the bash script to upload into Github using git. The bash script needs to be able to count from 1 to 50 and print it in the terminal. To add a little flare, colors were added with the numbers. <br>
 <br>
@@ -60,17 +59,17 @@ exit 0
 
 ```
 
-**Step 13**: After the script was created permissions were changed using `chmod u+x finalbashscript.sh` in order to execute it. Additionally, confirmed these permissions took effect running `ls -la`.
+**Step 13**: Permissions were changed using `chmod u+x finalbashscript.sh` in order to execute it. Additionally, confirmed these permissions took effect running `ls -la`.
 
-**Step 14**: The script was executed in the current directory it was in using `./finalbashscript.sh` and it worked!
+**Step 14**: The script was executed in the current directory it was in using `./finalbashscript.sh`, and it worked!
 
 **Step 15**: Changed the *finalbashscript.sh* to a *.txt* file by running `mv finalbashscript.sh finalbashscript.txt`
 
 **Step 16**: Added *finalbashscript.txt* to be committed. Entered the command `git add finalbashscript.txt`. Then ran `git status` to make sure it was staged.
 
-**Step 17**: Added file to commit with a message executing the command `git commit -m "bash script Linux CIS2023 final project"`
+**Step 17**: Added file to commit with a message `git commit -m "bash script Linux CIS2023 final project"`
 
-**Step 18**: Pushed the file to Github running the command `git push origin main`.
+**Step 18**: Pushed the file to Github `git push origin main`.
 
 **Step 19**: Refreshed Github repo in browser and the file appeared!
 
